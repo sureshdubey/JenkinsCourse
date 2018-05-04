@@ -31,6 +31,5 @@ public class sampleClass {
 			driver.quit();
 			eyes.abortIfNotClosed();
 		}
-		
 	}
 }
