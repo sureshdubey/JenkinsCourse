@@ -23,7 +23,7 @@ public class sampleClass {
 		Eyes eyes = new Eyes();
 		eyes.setApiKey("ecdYGJS4vskfvb8JgyHYV3hXKWBmC8a1cTTVhkvqMC0110");
 		
-		BatchInfo eyesBatchInfo = new BatchInfo("System.getenv('APPLITOOLS_BATCH_NAME')");
+		BatchInfo eyesBatchInfo = new BatchInfo(System.getenv("APPLITOOLS_BATCH_NAME"));
 		String eyesBatchID = System.getenv("APPLITOOLS_BATCH_ID");
 		if(eyesBatchID!=null) {
 			eyesBatchInfo.setId(eyesBatchID);
