@@ -36,8 +36,8 @@ public class sampleClass {
 			eyes.checkWindow("Home page");
 			eyes.close();
 		} catch (Exception e) {
-			driver.quit();
 			eyes.abortIfNotClosed();
 		}
+		driver.quit();
 	}
 }
