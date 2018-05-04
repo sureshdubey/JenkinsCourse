@@ -28,6 +28,7 @@ public class sampleClass {
 		if(eyesBatchID!=null) {
 			eyesBatchInfo.setId(eyesBatchID);
 		}
+		
 		eyes.setBatch(eyesBatchInfo);
 		
 		try {
