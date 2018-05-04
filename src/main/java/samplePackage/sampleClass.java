@@ -3,6 +3,7 @@ package samplePackage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.applitools.eyes.BatchInfo;
 import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.selenium.Eyes;
 
@@ -21,6 +22,13 @@ public class sampleClass {
 		
 		Eyes eyes = new Eyes();
 		eyes.setApiKey("ecdYGJS4vskfvb8JgyHYV3hXKWBmC8a1cTTVhkvqMC0110");
+		
+		BatchInfo eyesBatchInfo = new BatchInfo("System.getenv('APPLITOOLS_BATCH_NAME')");
+		String eyesBatchID = System.getenv("APPLITOOLS_BATCH_ID");
+		if(eyesBatchID!=null) {
+			eyesBatchInfo.setId(eyesBatchID);
+		}
+		eyes.setBatch(eyesBatchInfo);
 		
 		try {
 			eyes.open(driver, "Applitools_Test", "SampleTest");//, new RectangleSize(900, 900));
