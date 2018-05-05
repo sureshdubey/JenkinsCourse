@@ -28,7 +28,8 @@ public class sampleClass {
 		if(eyesBatchID!=null) {
 			eyesBatchInfo.setId(eyesBatchID);
 		}
-		//eyes.setBatch(eyesBatchInfo);
+		
+		eyes.setBatch(eyesBatchInfo);
 		
 		try {
 			eyes.open(driver, "Applitools_Test", "SampleTest");//, new RectangleSize(900, 900));
