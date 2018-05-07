@@ -9,8 +9,8 @@ import com.applitools.eyes.selenium.Eyes;
 
 import junit.framework.Assert;
 
-public class sampleClass {
-
+public class testNGClass {
+	
 	@Test
 	public void ValidateReport()
 	{
@@ -41,7 +41,7 @@ public class sampleClass {
 
 		}
 
-		eyes.setBatch(eyesBatchInfo);
+		//eyes.setBatch(eyesBatchInfo);
 
 		try {
 
@@ -62,5 +62,4 @@ public class sampleClass {
 		driver.quit();
 
 	}
-
 }
