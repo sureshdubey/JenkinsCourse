@@ -62,4 +62,10 @@ public class testNGClass {
 		driver.quit();
 
 	}
+	
+	@Test
+	public void ValidateReport1()
+	{
+		System.out.println("This is second test");
+	}
 }
