@@ -2,7 +2,9 @@ node('master'){
     
     Applitools('https://eyes.applitools.com') {
 
-        checkout scm
+        stage('Checkout') {
+            checkout scm
+        }
         
         stage('Build') {
             def project_path = "test pipeline"
