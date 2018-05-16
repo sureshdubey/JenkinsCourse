@@ -13,6 +13,10 @@ pipeline {
         BRANCH_NAME = 'master'
     }
     
+    options {
+        timestamps()
+    }
+    
     stages {
         stage('SampleStage') {
             steps{
