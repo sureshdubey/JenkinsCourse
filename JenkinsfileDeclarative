@@ -21,7 +21,7 @@ pipeline {
         stage('SampleStage') {
             steps{
                 script {
-                    if ("${env.JOB_NAME}" == "Declarative Pipeline") {
+                    if ("${env.JOB_NAME}" == "Declarative Pipeline1") {
                         echo "This is declarative pipeline sample"
                         echo "${env.JOB_NAME}"
                     } else {
