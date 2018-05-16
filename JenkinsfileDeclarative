@@ -9,6 +9,10 @@ pipeline {
         )
     }
     
+    environment {
+        BRANCH_NAME : 'master'
+    }
+    
     stages {
         stage('SampleStage') {
             steps{
@@ -19,7 +23,7 @@ pipeline {
         
         stage('Checkout') {
             steps{
-                git url : "https://github.com/sureshdubey/JenkinsCourse.git", branch : "master"
+                git url : "https://github.com/sureshdubey/JenkinsCourse.git", branch : env.BRANCH_NAME
             }
         }
         
