@@ -12,7 +12,7 @@ pipeline {
     
     /* creating environment variable in Jenkins */
     environment {
-        BRANCH_NAME = 'master'
+        BRANCH_NAME = 'master1'
     }
     
     /* option apply to build */
