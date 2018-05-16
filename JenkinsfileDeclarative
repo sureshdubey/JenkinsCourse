@@ -20,8 +20,14 @@ pipeline {
     stages {
         stage('SampleStage') {
             steps{
-                echo "This is declarative pipeline sample"
-                echo "${env.JOB_NAME}"
+                script {
+                    if ("${env.JOB_NAME}" == "Declarative Pipeline") {
+                        echo "This is declarative pipeline sample"
+                        echo "${env.JOB_NAME}"
+                    } else {
+                        echo "JOB NAME IS NOT CORRECT"
+                    }
+                }
             }
         }
         
