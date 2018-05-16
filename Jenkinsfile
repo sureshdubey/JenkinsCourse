@@ -1,8 +1,12 @@
 node('master'){
 
-        /* option apply to build */
-        options {
-            timestamps() 
+        /* define the parameter in Jenkins */
+        parameters {
+        string(
+            name: 'run-mode',
+            defaultValue: 'test',
+            description: 'Select the run mode',
+        )
         }
         
         stage('Checkout') {
