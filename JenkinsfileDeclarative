@@ -5,7 +5,7 @@ pipeline {
         string(
             name: 'run-mode',
             defaultValue: 'test',
-            description: 'Select the test run mode',
+            description: 'Select the run mode',
         )
     }
     
