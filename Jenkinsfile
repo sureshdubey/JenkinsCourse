@@ -1,5 +1,10 @@
 node('master'){
     
+    /* option apply to build */
+    options {
+        timestamps() 
+    }
+    
     Applitools('https://eyes.applitools.com') {
 
         stage('Checkout') {
