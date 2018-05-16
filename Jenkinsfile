@@ -1,6 +1,4 @@
 node('master'){
-   
-    Applitools('https://eyes.applitools.com') {
 
         /* option apply to build */
         options {
@@ -35,7 +33,6 @@ node('master'){
             archiveArtifacts 'target/*.jar'
         }
     }
-}
 
 input 'Deploy to stage environment?'
 stage name:'Deploy'
