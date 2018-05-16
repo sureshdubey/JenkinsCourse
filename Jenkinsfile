@@ -1,13 +1,4 @@
 node('master'){
-
-        /* define the parameter in Jenkins */
-        parameters {
-        string(
-            name: 'run-mode',
-            defaultValue: 'test',
-            description: 'Select the run mode',
-        )
-        }
         
         stage('Checkout') {
             checkout scm
@@ -42,5 +33,4 @@ input 'Deploy to stage environment?'
 stage name:'Deploy'
 node('master') {
     echo 'Deployment is done successfully'
-
 }
