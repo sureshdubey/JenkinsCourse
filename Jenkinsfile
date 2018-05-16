@@ -1,12 +1,12 @@
 node('master'){
-    
-    /* option apply to build */
-    options {
-        timestamps() 
-    }
-    
+   
     Applitools('https://eyes.applitools.com') {
 
+        /* option apply to build */
+        options {
+            timestamps() 
+        }
+        
         stage('Checkout') {
             checkout scm
         }
