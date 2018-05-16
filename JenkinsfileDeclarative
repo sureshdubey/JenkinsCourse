@@ -1,6 +1,7 @@
 pipeline {
     agent any
     
+    /* define the parameter in Jenkins */
     parameters {
         string(
             name: 'run-mode',
@@ -9,31 +10,38 @@ pipeline {
         )
     }
     
+    /* creating environment variable in Jenkins */
     environment {
         BRANCH_NAME = 'master'
     }
     
+    /* option apply to build */
     options {
         timestamps() 
     }
     
     stages {
         stage('SampleStage') {
+            /* mentione agent name here to run this particluar stage in selected agent */
+            /*agent { 
+                label 'maven' 
+            }*/
+            
             steps{
-                script {
-                    if ("${env.JOB_NAME}" == "Declarative Pipeline1") {
-                        echo "This is declarative pipeline sample"
-                        echo "${env.JOB_NAME}"
-                    } else {
-                        echo "JOB NAME IS NOT CORRECT"
-                    }
-                }
+                echo "This is declarative pipeline sample"
+                echo "${env.JOB_NAME}"
             }
         }
         
         stage('Checkout') {
             steps{
-                checkout scm
+                script {
+                    if ("${env.BRANCH_NAME}" == "master") {
+                        checkout scm
+                    } else {
+                        echo "BRANCH NAME IS NOT CORRECT"
+                    }
+                }
             }
         }
         
